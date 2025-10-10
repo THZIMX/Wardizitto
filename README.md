@@ -1,93 +1,173 @@
+# ✨ Wardizitto - Seu Bot Discord Multifuncional ✨
+
 <div align="center">
-  <img src="https://wardizitto.abccloud.com.br/images/logo.png" height="120" alt="MightWard Logo">
-  <h1>MightWard Discord Bot</h1>
-  
+  <img src="https://via.placeholder.com/1200x400.png?text=Wardizitto+Bot+Discord" alt="Wardizitto Logo" width="500">
+
   <p>
-    <img alt="AGPL License" src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg">
-    <img alt="Discord.js" src="https://img.shields.io/badge/discord.js-v14-blue">
-    <img alt="Status" src="https://img.shields.io/badge/status-production-brightgreen">
-    <img alt="Open Source" src="https://img.shields.io/badge/open%20source-%E2%9D%A4-success">
+    <img alt="License" src="https://img.shields.io/badge/License-ISC-blue.svg">
+    <img alt="Node.js" src="https://img.shields.io/badge/Node.js-v18%2B-green">
+    <img alt="Discord.js" src="https://img.io/badge/Discord.js-v14-7289DA">
+    <img alt="Database" src="https://img.shields.io/badge/Database-MySQL-orange">
+    <img alt="Status" src="https://img.shields.io/badge/Status-Active-success">
   </p>
-  
-  <p><strong>Solução profissional de gerenciamento para comunidades Discord</strong></p>
+
+  <p><strong>Um bot Discord versátil e robusto, desenvolvido para enriquecer a experiência da sua comunidade com funcionalidades de moderação, economia, social e utilidades.</strong></p>
+
+  <a href="#-descrição">Descrição</a> •
+  <a href="#-funcionalidades-principais">Funcionalidades</a> •
+  <a href="#-tecnologias-utilizadas">Tecnologias</a> •
+  <a href="#-instalação-e-configuração">Instalação</a> •
+  <a href="#-estrutura-do-projeto">Estrutura</a> •
+  <a href="#-contribuição">Contribuição</a> •
+  <a href="#-licença">Licença</a>
 </div>
 
 ---
 
-## ✨ Visão Geral
+## 🚀 Descrição
 
-**MightWard** é um bot completo para administração de servidores Discord, oferecendo:
+**Wardizitto** é um bot Discord robusto e versátil, projetado para elevar a experiência da sua comunidade! 🤖 Desenvolvido em **Node.js** com a poderosa biblioteca `discord.js`, ele oferece uma vasta gama de comandos e funcionalidades que abrangem desde a moderação essencial até sistemas de economia complexos e interações sociais divertidas. Tudo isso é impulsionado por um eficiente banco de dados **MySQL** para garantir a persistência e segurança dos seus dados.
 
-- 🛡️ Ferramentas avançadas de moderação
-- 🔐 Sistema de verificação via OAuth2
-- 🎟️ Painel de tickets profissional
-- ⚙️ Configuração intuitiva via Discord
-- 📊 Analytics e relatórios automáticos
+## 🌟 Funcionalidades Principais
 
-🔗 [Site Oficial](https://wardizitto.abccloud.com.br) | [Suporte](https://discord.gg/rwWhZ4GjWP) | [Documentação](https://github.com/THZIMX/Might-Ward/)
+O Wardizitto está repleto de recursos, organizados em categorias intuitivas para facilitar a gestão e a diversão no seu servidor:
 
----
+### 🛡️ 1. Administração
+Comandos essenciais para a gestão do servidor, incluindo a criação de sistemas de tickets 🎫, sorteios 🎉 e painéis de controle administrativos.
 
-## 🚀 Recursos Principais
+### 🎮 2. Diversão
+Traga mais entretenimento para seus membros com jogos como Jogo da Velha ❌⭕, adivinhação 🧠, dados 🎲, memes engraçados 😂 e contagens regressivas ⏳.
 
-| Módulo        | Descrição                                  |
-|---------------|-------------------------------------------|
-| **🔐 Verificação** | Integração com OAuth2 e roles automáticas |
-| **🎟️ Tickets** | Sistema completo com categorias customizadas |
-| **⚙️ Configuração** | Painel interativo no Discord              |
-| **🤖 Automod** | Filtros inteligentes para spam e links    |
-| **📈 Estatísticas** | Dashboard com crescimento do servidor     |
+### 💰 3. Economia
+Um sistema de economia completo! Os usuários podem ter perfis 📊, realizar transferências 💸, depósitos 🏦, saques e até escolher profissões 👷 para ganhar dinheiro no servidor.
 
----
+### 🔨 4. Moderação
+Ferramentas poderosas para manter seu servidor seguro e organizado. Inclui adição de emojis personalizados ✨, limpeza de mensagens 🧹, gerenciamento de usuários (ban 🚫, unban ✅, lock/unlock canais 🔒🔓), avisos ⚠️ e comunicados importantes 📢.
 
-## 🛠️ Instalação
+### ❤️ 5. Social
+Incentive a interação entre os membros com comandos sociais como abraços 🤗, beijos 😘, casamentos 💍, shippar casais 💖 e compartilhamento de fanarts 🎨.
 
-### Pré-requisitos
-- Node.js v18+
-- Banco de dados MariaDB/MySQL
-- [Token do Bot](https://discord.com/developers/applications)
+### 🛠️ 6. Utilidades
+Um conjunto de ferramentas úteis para o dia a dia, como informações detalhadas do bot ℹ️, dados de usuário 👤 e servidor 🖥️, calculadora ➕➖, verificação de ping 📡, status AFK 🌙, e integrações com APIs como VirusTotal 🦠 e GitHub 🐙.
 
-### Passo a Passo
+## 💻 Tecnologias Utilizadas
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/THZIMX/Might-Ward.git
-cd Might-Ward
+O projeto Wardizitto é construído sobre uma base tecnológica sólida:
 
-## 📜 Licença AGPLv3
+*   **Node.js**: O ambiente de execução JavaScript que alimenta o bot.
+*   **discord.js**: A biblioteca oficial e mais popular para interagir com a API do Discord.
+*   **MySQL**: Um sistema de gerenciamento de banco de dados relacional de alta performance para todas as informações do bot.
+*   **Groq SDK**: Utilizado para funcionalidades avançadas de IA e processamento de linguagem natural 🧠.
+*   **VirusTotal API**: Para garantir a segurança, verificando arquivos e links suspeitos 🛡️.
+*   **Outras bibliotecas**: `@discordjs/builders`, `@discordjs/rest`, `@discordjs/voice`, `axios`, `canvas`, `jimp`, `moment`, `ms`, `mysql2`, `qrcode`, `uuid`, `ytdl-core`, entre outras, para funcionalidades específicas e otimização.
 
-Este projeto está licenciado sob a GNU Affero General Public License v3.0:
+## ⚙️ Instalação e Configuração
 
-✅ Permissões:
-- Uso comercial
-- Modificação
-- Distribuição
+Para colocar o Wardizitto em funcionamento no seu servidor, siga estes passos:
 
-❌ Restrições:
-- Remover créditos
-- Redistribuir como closed-source
+1.  **Clone o repositório:**
+    ```bash
+    git clone <URL_DO_SEU_REPOSITORIO>
+    cd Wardizitto
+    ```
 
-📄 [Leia a licença completa](LICENSE)
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
----
+3.  **Configure o `config.json`:**
+    Crie um arquivo `config.json` na raiz do projeto com as seguintes informações. **Lembre-se de manter suas chaves e tokens seguros!**
+    ```json
+    {
+      "token": "SEU_TOKEN_DO_BOT",
+      "clientId": "SEU_CLIENT_ID_DO_BOT",
+      "canal_bugs": "ID_DO_CANAL_DE_BUGS",
+      "canal_fanarts_revisao": "ID_DO_CANAL_DE_FANARTS_EM_REVISAO",
+      "mariaDB": {
+        "host": "SEU_HOST_MYSQL",
+        "user": "SEU_USUARIO_MYSQL",
+        "password": "SUA_SENHA_MYSQL",
+        "database": "SEU_BANCO_DE_DADOS_MYSQL"
+      },
+      "quickDB": {
+        "storage": "./databases/databases.json"
+      },
+      "webhookLogs": {
+        "url": "URL_DO_WEBHOOK_DE_LOGS"
+      },
+      "groqApiKey": "SUA_API_KEY_GROQ",
+      "virustotal_api_key": "SUA_API_KEY_VIRUSTOTAL"
+    }
+    ```
+    *   Substitua `SEU_TOKEN_DO_BOT` e `SEU_CLIENT_ID_DO_BOT` pelas credenciais obtidas no [Portal do Desenvolvedor Discord](https://discord.com/developers/applications).
+    *   Preencha as informações do `mariaDB` com os detalhes do seu servidor de banco de dados **MySQL**.
+    *   Configure `canal_bugs`, `canal_fanarts_revisao` e `webhookLogs.url` com os IDs de canais e URL de webhook do seu servidor para logs e funcionalidades específicas.
+    *   Obtenha as chaves de API para `groqApiKey` (Groq) e `virustotal_api_key` (VirusTotal) se for utilizar essas funcionalidades avançadas.
+
+4.  **Execute o bot:**
+    ```bash
+    node index.js
+    ```
+
+## 📂 Estrutura do Projeto
+
+Uma visão geral da organização do projeto Wardizitto:
+
+```
+Wardizitto/
+├── commands/                 # 🚀 Todos os comandos do bot, organizados por categoria
+│   ├── ADMINISTRAÇÃO/        # 🛡️ Comandos de administração do servidor
+│   ├── DIVERSÃO/             # 🎮 Comandos de entretenimento e jogos
+│   ├── DONO-BOT/             # 👑 Comandos exclusivos para o dono do bot
+│   ├── ECONOMIA/             # 💰 Comandos relacionados ao sistema de economia
+│   ├── MODERAÇÃO/            # 🔨 Comandos de moderação do servidor
+│   ├── SOCIAL/               # ❤️ Comandos de interação social
+│   └── UTILIDADES/           # 🛠️ Comandos de utilidade geral
+├── databases/                # 🗄️ Arquivos de banco de dados (JSON) para dados leves
+│   ├── database.json
+│   ├── doacoes.json
+│   ├── emojis.json
+│   ├── myJsonDatabase.json
+│   └── warnings.json
+├── events/                   # 🔔 Manipuladores de eventos do Discord
+│   ├── ECONOMIA/
+│   ├── Art-fã.js
+│   ├── Report-bug.js
+│   ├── Verificacao.js
+│   ├── canal-env.js
+│   ├── comunicado.js
+│   ├── gerenciarUsuario.js
+│   ├── githubSelect.js
+│   ├── guildCraete.js
+│   ├── guildMemberUpdate.js
+│   ├── guildUpdate.js
+│   ├── interactionCreate.js
+│   ├── logs.js
+│   ├── mentionResponse.js
+│   ├── messageCreate.js
+│   ├── ready.js
+│   ├── sair.js
+│   ├── ticket.js
+│   └── top-casal.js
+├── handlers/                 # 🔗 Funções para carregar comandos e eventos
+│   ├── commandHandler.js
+│   ├── db.js
+│   └── eventHandler.js
+├── models/                   # 💾 Modelos de banco de dados (ex: MySQL)
+│   └── mariadb.js            # Nota: O arquivo mariadb.js pode precisar ser renomeado ou adaptado para MySQL puro.
+├── utils/                    # 🔧 Funções utilitárias e helpers
+│   └── virusTotal.js
+├── config.json               # ⚙️ Arquivo de configuração principal do bot
+├── index.js                  # 🚀 Ponto de entrada principal do bot
+└── package.json              # 📦 Metadados do projeto e dependências
+```
 
 ## 🤝 Contribuição
 
-Aceitamos contribuições seguindo estas diretrizes:
+Contribuições são sempre bem-vindas! ✨ Sinta-se à vontade para abrir [issues](https://github.com/THZIMX/Wardizitto/issues) para relatar bugs ou sugerir melhorias, e [pull requests](https://github.com/THZIMX/Wardizitto/pulls) para adicionar novas funcionalidades ou corrigir problemas. Juntos, podemos tornar o Wardizitto ainda melhor! 😊
 
-1. Abra uma issue discutindo sua proposta
-2. Faça fork do projeto
-3. Crie um branch para sua feature (`git checkout -b feature/incrivel`)
-4. Commit suas mudanças (`git commit -m 'Add incrível feature'`)
-5. Push para o branch (`git push origin feature/incrivel`)
-6. Abra um Pull Request
+## 📄 Licença
 
----
+Este projeto está licenciado sob a licença **ISC**. Para mais detalhes, consulte o arquivo `LICENSE` na raiz do repositório. ⚖️
 
-## 📞 Contato
-
-**Autor:** THZIMX 
-**Ano:** 2024  
-
-💙 Discord theeuss_x  
-🌐 Website: [mightward.abccloud.com.br](https://mightward.abccloud.com.br) 
