@@ -67,7 +67,7 @@ Para colocar o Wardizitto em funcionamento no seu servidor, siga estes passos:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO>
+    git clone <https://github.com/THZIMX/Wardizitto.git>
     cd Wardizitto
     ```
 
