@@ -12,7 +12,7 @@ const {
 const { v4: uuidv4 } = require('uuid');
 const sanitizeHtml = require('sanitize-html');
 const discordTranscripts = require('discord-html-transcripts');
-const { query } = require('../handlers/db');
+const { query } = require('../../handlers/db');
 
 // IDs dos botões
 const TICKET_BUTTONS = {
@@ -24,7 +24,7 @@ const TICKET_BUTTONS = {
 };
 
 // Carrega emojis
-const emojisData = require('../databases/emojis.json');
+const emojisData = require('../../databases/emojis.json');
 const staticEmojis = emojisData.static || {};
 const animatedEmojis = emojisData.animated || {};
 

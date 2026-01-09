@@ -8,7 +8,7 @@ const {
   EmbedBuilder
 } = require('discord.js');
 
-const { static: emojis } = require('../databases/emojis.json'); // Corrija conforme sua estrutura real
+const { static: emojis } = require('../../databases/emojis.json'); // Corrija conforme sua estrutura real
 
 module.exports = {
   name: 'canalenv',

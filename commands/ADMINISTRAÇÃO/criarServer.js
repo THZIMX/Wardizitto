@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, ChannelType, PermissionFlagsBits, EmbedBuilder, MessageFlags } = require('discord.js');
 const fs = require('fs/promises');
 const path = require('path');
-const { groqApiKey, groqModel } = require('../../config.json'); // <-- Agora lê groqModel
+const { groqApiKey, groqModel } = require('../../config.json');
 const defaultConfig = require('./default-config.json');
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms));
@@ -48,7 +48,7 @@ async function gerarConfigIA(descricao) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: groqModel, // <-- Usando o modelo do config.json
+        model: groqModel,
         messages: [
           {
             role: 'system',

@@ -4,7 +4,7 @@ const { Collection } = require('discord.js');
 
 module.exports = (client) => {
   client.commands = new Collection();
-  client.contextMenus = new Collection(); // Se quiser usar context menus depois
+  client.contextMenus = new Collection();
 
   const commandsPath = path.join(__dirname, '../commands');
 
@@ -16,7 +16,7 @@ module.exports = (client) => {
       const filePath = path.join(dir, file);
 
       if (fs.lstatSync(filePath).isDirectory()) {
-        loadCommands(filePath); // Recursivamente
+        loadCommands(filePath);
       } else if (file.endsWith('.js')) {
         try {
           const command = require(filePath);

@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const { pool } = require('../handlers/db.js'); // Usa sua conexão do MariaDB
+const { pool } = require('../../handlers/db.js'); // Usa sua conexão do MariaDB
 
 module.exports = {
   name: 'messageCreate',

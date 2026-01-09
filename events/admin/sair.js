@@ -5,7 +5,7 @@ const {
   ButtonStyle
 } = require('discord.js');
 
-const emojis = require('../databases/emojis.json');
+const emojis = require('../../databases/emojis.json');
 const emojiLeft = `<:icons_leftarrow:${emojis.static.icons_leftarrow}>`;
 const emojiRight = `<:icons_rightarrow:${emojis.static.icons_rightarrow}>`;
 const emojiLeave = `<:icons_leave:${emojis.static.icons_leave}>`;

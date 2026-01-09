@@ -1,5 +1,5 @@
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
-const mysql = require('mysql2/promise'); // MariaDB
+const mysql = require('mysql2/promise');
 const config = require('./config.json');
 const commandHandler = require('./handlers/commandHandler');
 const eventHandler = require('./handlers/eventHandler');

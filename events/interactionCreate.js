@@ -5,7 +5,7 @@ const { pool } = require('../handlers/db.js');
 const cooldowns = new Map();
 
 // Importações externas fora do handler (melhor desempenho)
-const VerificacaoHandler = require('../events/Verificacao.js');
+const VerificacaoHandler = require('./util/Verificacao.js');
 
 module.exports = {
   name: Events.InteractionCreate,

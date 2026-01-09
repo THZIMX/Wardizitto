@@ -1,4 +1,4 @@
-const { pool } = require('../handlers/db.js'); // Importa o pool do banco de dados
+const { pool } = require('../../handlers/db.js');
 
 module.exports = {
   name: 'verify',

@@ -9,7 +9,6 @@ const {
 const mysql = require('mysql2/promise');
 const config = require('../../config.json');
 
-// Configuração do pool de conexões MySQL
 const pool = mysql.createPool({
   host: config.mariaDB.host,
   user: config.mariaDB.user,
