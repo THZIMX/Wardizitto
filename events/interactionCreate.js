@@ -6,6 +6,7 @@ const cooldowns = new Map();
 
 // Importações externas fora do handler (melhor desempenho)
 const VerificacaoHandler = require('./util/Verificacao.js');
+const TicketHandler = require('./admin/TicketHandler.js');
 
 module.exports = {
   name: Events.InteractionCreate,
@@ -60,10 +61,21 @@ module.exports = {
         await command.execute(interaction, interaction.client);
       }
 
-      // 🎛️ Botões
-      if (interaction.isButton()) {
+      // 🎛️ Botões, Modais e Select Menus
+      if (interaction.isButton() || interaction.isModalSubmit() || interaction.isAnySelectMenu()) {
         const handlers = {
-          'verificar_button': VerificacaoHandler
+          'verificar_button': VerificacaoHandler,
+          'open_ticket': TicketHandler,
+          'close_ticket': TicketHandler,
+          'claim_ticket': TicketHandler,
+          'config_ticket_channels': TicketHandler,
+          'config_ticket_appearance': TicketHandler,
+          'send_ticket_panel': TicketHandler,
+          'modal_ticket_channels': TicketHandler,
+          'modal_ticket_appearance': TicketHandler,
+          'select_ticket_category': TicketHandler,
+          'select_ticket_channels': TicketHandler,
+          'select_ticket_role': TicketHandler
         };
 
         const handler = handlers[interaction.customId];

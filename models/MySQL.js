@@ -158,6 +158,41 @@ async function initMySQL(pool) {
     `);
     console.log("✅ Tabela 'contagens' criada/verificada com sucesso!");
 
+    // Tabela tickets_config
+    await pool.execute(`
+      CREATE TABLE IF NOT EXISTS tickets_config (
+        guild_id VARCHAR(20) PRIMARY KEY,
+        category_id VARCHAR(20),
+        support_role_id VARCHAR(20),
+        logs_channel_id VARCHAR(20),
+        panel_message_id VARCHAR(20),
+        panel_channel_id VARCHAR(20),
+        embed_title VARCHAR(255) DEFAULT '🎫 Central de Suporte',
+        embed_description TEXT,
+        embed_color VARCHAR(7) DEFAULT '#2f3136',
+        ticket_message TEXT
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    `);
+    console.log("✅ Tabela 'tickets_config' criada/verificada com sucesso!");
+
+    // Tabela tickets
+    await pool.execute(`
+      CREATE TABLE IF NOT EXISTS tickets (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        guild_id VARCHAR(20) NOT NULL,
+        channel_id VARCHAR(20) NOT NULL,
+        user_id VARCHAR(20) NOT NULL,
+        status ENUM('open', 'closed') DEFAULT 'open',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        closed_at TIMESTAMP NULL,
+        closed_by VARCHAR(20),
+        transcript_url TEXT,
+        KEY idx_guild_channel (guild_id, channel_id),
+        KEY idx_user (user_id)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    `);
+    console.log("✅ Tabela 'tickets' criada/verificada com sucesso!");
+
     console.log("✅ Todas as tabelas foram inicializadas com sucesso!");
   } catch (error) {
     console.error("❌ Erro ao iniciar o MySQL:", error);
