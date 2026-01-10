@@ -84,14 +84,11 @@ Para colocar o Wardizitto em funcionamento no seu servidor, siga estes passos:
       "clientId": "SEU_CLIENT_ID_DO_BOT",
       "canal_bugs": "ID_DO_CANAL_DE_BUGS",
       "canal_fanarts_revisao": "ID_DO_CANAL_DE_FANARTS_EM_REVISAO",
-      "mariaDB": {
+      "Mysql": {
         "host": "SEU_HOST_MYSQL",
         "user": "SEU_USUARIO_MYSQL",
         "password": "SUA_SENHA_MYSQL",
         "database": "SEU_BANCO_DE_DADOS_MYSQL"
-      },
-      "quickDB": {
-        "storage": "./databases/databases.json"
       },
       "webhookLogs": {
         "url": "URL_DO_WEBHOOK_DE_LOGS"
