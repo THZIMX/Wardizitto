@@ -112,57 +112,9 @@ Para colocar o Wardizitto em funcionamento no seu servidor, siga estes passos:
 
 ## 📂 Estrutura do Projeto
 
-Uma visão geral da organização do projeto Wardizitto:
-
 ```
-Wardizitto/
-├── commands/                 # 🚀 Todos os comandos do bot, organizados por categoria
-│   ├── ADMINISTRAÇÃO/        # 🛡️ Comandos de administração do servidor
-│   ├── DIVERSÃO/             # 🎮 Comandos de entretenimento e jogos
-│   ├── DONO-BOT/             # 👑 Comandos exclusivos para o dono do bot
-│   ├── ECONOMIA/             # 💰 Comandos relacionados ao sistema de economia
-│   ├── MODERAÇÃO/            # 🔨 Comandos de moderação do servidor
-│   ├── SOCIAL/               # ❤️ Comandos de interação social
-│   └── UTILIDADES/           # 🛠️ Comandos de utilidade geral
-├── databases/                # 🗄️ Arquivos de banco de dados (JSON) para dados leves
-│   ├── database.json
-│   ├── doacoes.json
-│   ├── emojis.json
-│   ├── myJsonDatabase.json
-│   └── warnings.json
-├── events/                   # 🔔 Manipuladores de eventos do Discord
-│   ├── ECONOMIA/
-│   ├── Art-fã.js
-│   ├── Report-bug.js
-│   ├── Verificacao.js
-│   ├── canal-env.js
-│   ├── comunicado.js
-│   ├── gerenciarUsuario.js
-│   ├── githubSelect.js
-│   ├── guildCraete.js
-│   ├── guildMemberUpdate.js
-│   ├── guildUpdate.js
-│   ├── interactionCreate.js
-│   ├── logs.js
-│   ├── mentionResponse.js
-│   ├── messageCreate.js
-│   ├── ready.js
-│   ├── sair.js
-│   ├── ticket.js
-│   └── top-casal.js
-├── handlers/                 # 🔗 Funções para carregar comandos e eventos
-│   ├── commandHandler.js
-│   ├── db.js
-│   └── eventHandler.js
-├── models/                   # 💾 Modelos de banco de dados (ex: MySQL)
-│   └── mariadb.js            # Nota: O arquivo mariadb.js pode precisar ser renomeado ou adaptado para MySQL puro.
-├── utils/                    # 🔧 Funções utilitárias e helpers
-│   └── virusTotal.js
-├── config.json               # ⚙️ Arquivo de configuração principal do bot
-├── index.js                  # 🚀 Ponto de entrada principal do bot
-└── package.json              # 📦 Metadados do projeto e dependências
+ESTA EM UM NOVO DESENVOLVIMENTO, AGUARDE A ATUALIZACAO.
 ```
-
 ## 🤝 Contribuição
 
 Contribuições são sempre bem-vindas! ✨ Sinta-se à vontade para abrir [issues](https://github.com/THZIMX/Wardizitto/issues) para relatar bugs ou sugerir melhorias, e [pull requests](https://github.com/THZIMX/Wardizitto/pulls) para adicionar novas funcionalidades ou corrigir problemas. Juntos, podemos tornar o Wardizitto ainda melhor! 😊
