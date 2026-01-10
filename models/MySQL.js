@@ -127,77 +127,6 @@ async function initMySQL(pool) {
     `);
     console.log("✅ Tabela 'uvs_stats' criada/verificada com sucesso!");
 
-    // Tabela ticket_config
-    await pool.execute(`
-      CREATE TABLE IF NOT EXISTS ticket_config (
-        guild_id VARCHAR(20) PRIMARY KEY,
-        category_id VARCHAR(20) NOT NULL,
-        staff_role_id VARCHAR(20) NOT NULL,
-        log_channel_id VARCHAR(20) NOT NULL,
-        panel_channel_id VARCHAR(20),
-        open_message TEXT,
-        close_message TEXT,
-        generate_transcript BOOLEAN DEFAULT TRUE,
-        ticket_limit INT DEFAULT 3,
-        channel_prefix VARCHAR(50) DEFAULT 'ticket',
-        configured_by VARCHAR(20) NOT NULL,
-        configured_at BIGINT NOT NULL,
-        active BOOLEAN DEFAULT TRUE
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    `);
-    console.log("✅ Tabela 'ticket_config' criada/verificada com sucesso!");
-
-    // Tabela tickets
-    await pool.execute(`
-      CREATE TABLE IF NOT EXISTS tickets (
-        id VARCHAR(20) PRIMARY KEY,
-        user_id VARCHAR(20) NOT NULL,
-        user_tag VARCHAR(100) NOT NULL,
-        reason TEXT NOT NULL,
-        opened_at BIGINT NOT NULL,
-        closed_at BIGINT,
-        closed_by VARCHAR(20),
-        status ENUM('open', 'closed', 'archived', 'locked') DEFAULT 'open',
-        guild_id VARCHAR(20) NOT NULL,
-        locked_by VARCHAR(20),
-        locked_at BIGINT,
-        archived_by VARCHAR(20),
-        archived_at BIGINT,
-        KEY idx_user_guild (user_id, guild_id)
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    `);
-    console.log("✅ Tabela 'tickets' criada/verificada com sucesso!");
-
-    // Tabela user_tickets
-    await pool.execute(`
-      CREATE TABLE IF NOT EXISTS user_tickets (
-        user_id VARCHAR(20) NOT NULL,
-        ticket_id VARCHAR(20) NOT NULL,
-        status ENUM('open', 'closed', 'archived', 'locked') DEFAULT 'open',
-        opened_at BIGINT NOT NULL,
-        PRIMARY KEY (user_id, ticket_id)
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    `);
-    console.log("✅ Tabela 'user_tickets' criada/verificada com sucesso!");
-
-    // Tabela ticket_history
-    await pool.execute(`
-      CREATE TABLE IF NOT EXISTS ticket_history (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        ticket_id VARCHAR(20) NOT NULL,
-        user_id VARCHAR(20) NOT NULL,
-        user_tag VARCHAR(100) NOT NULL,
-        reason TEXT NOT NULL,
-        opened_at BIGINT NOT NULL,
-        closed_at BIGINT NOT NULL,
-        closed_by VARCHAR(20) NOT NULL,
-        guild_id VARCHAR(20) NOT NULL,
-        KEY idx_ticket (ticket_id),
-        KEY idx_guild (guild_id)
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    `);
-    console.log("✅ Tabela 'ticket_history' criada/verificada com sucesso!");
-
     // Tabela polls
     await pool.execute(`
       CREATE TABLE IF NOT EXISTS polls (
@@ -228,21 +157,6 @@ async function initMySQL(pool) {
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     `);
     console.log("✅ Tabela 'contagens' criada/verificada com sucesso!");
-
-    // Tabela logs_config
-    await pool.execute(`
-      CREATE TABLE IF NOT EXISTS logs_config (
-        guild_id VARCHAR(20) PRIMARY KEY,
-        log_channel_id VARCHAR(20) DEFAULT NULL,
-        log_message_delete BOOLEAN DEFAULT 0,
-        log_message_edit BOOLEAN DEFAULT 0,
-        log_member_join BOOLEAN DEFAULT 0,
-        log_member_leave BOOLEAN DEFAULT 0,
-        log_ban_add BOOLEAN DEFAULT 0,
-        log_ban_remove BOOLEAN DEFAULT 0
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-    `);
-    console.log("✅ Tabela 'logs_config' criada/verificada com sucesso!");
 
     console.log("✅ Todas as tabelas foram inicializadas com sucesso!");
   } catch (error) {

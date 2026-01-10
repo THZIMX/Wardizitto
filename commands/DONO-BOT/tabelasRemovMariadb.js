@@ -9,7 +9,7 @@ const {
   MessageFlags,
 } = require('discord.js');
 const { pool } = require('../../handlers/db.js');
-const { mariaDB } = require('../../config.json');
+const { MySQL } = require('../../config.json');
 
 const ownerId = '1033922089436053535';
 
@@ -35,7 +35,7 @@ module.exports = {
 
     try {
       const [rows] = await pool.execute(`SHOW TABLES`);
-      const tableKey = `Tables_in_${mariaDB.database}`;
+      const tableKey = `Tables_in_${MySQL.database}`;
       const tables = rows.map(row => row[tableKey]);
 
       if (tables.length === 0) {
